@@ -1,0 +1,831 @@
+/*
+Theme Name: Flusk
+Theme URI: http://themewagon.com/demo/Flusk/
+Author: ThemeWagon
+Author URI: http://themewagon.com/
+Description: Slick One page HTML 5 template powered by Bootstrap 3.
+Version: 1.14.11
+License: GNU General Public License v3
+License URI: http://www.gnu.org/licenses/gpl-3.0.txt
+Tags: blur, white, one page, parallax, responsive-layout, full-width-template
+Text Domain: flusk
+*/
+
+/**
+* Table of Contents:
+*
+* 01.0 - Global
+* 02.0 - Header
+* 03.0 - Drawer with menu
+* 04.0 - Parallax styles
+* 05.0 - Recent works
+* 06.0 - Services
+* 07.0 - Blog
+* 08.0 - Testimonials
+* 09.0 - Contact
+* 10.0 - Footer
+* 11.0 - Responsive styles
+* -----------------------------------------------------------------------------
+*/
+
+
+/* ///////////////////////////////////////////////////////////////////// 
+//  01 - Global 
+/////////////////////////////////////////////////////////////////////*/
+
+* {outline: none !important;}
+
+::selection {
+	background-color: #475B6F;
+	color: #fff;
+}
+
+@font-face {
+  font-family: 'NeuzeitGro-Reg';
+  src: url('../fonts/NeuzeitGro-Reg.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/NeuzeitGro-Reg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/NeuzeitGro-Reg.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/NeuzeitGro-Reg.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/NeuzeitGro-Reg.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/NeuzeitGro-Reg.svg#svgFontName') format('svg'); /* Legacy iOS */
+       -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: grayscale;
+
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	overflow-y: scroll;
+}
+
+body {
+	color: #6a6a6a;	
+	background: #fff;
+	font-family: 'NeuzeitGro-Reg';
+	letter-spacing: 1px;
+}
+
+p {margin: 0 0 20px 0;	}
+
+img {max-width: 100%;}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+a{	
+	color: #3a4f52;
+	-o-transition: all .4s;
+	-ms-transition: all .4s;
+	-moz-transition: all .4s;
+	-webkit-transition: all .4s;
+	transition: all .4s;
+}
+
+a:hover {
+	color: #4290ae;	
+}
+
+
+h1, h2, h3, h4, h5, h6{		
+	margin: 0 0 15px 0;	
+	color: #3A4F52;
+	font-family: 'NeuzeitGro-Reg';
+	line-height: 40px;
+}
+
+.btn{border-radius: 0;}
+.btn-o {
+    border: 1px solid #3A4F52;
+    color: #3A4F52;
+}
+.btn-o:hover {
+    background: #3A4F52;
+    color: white;
+}
+.btn.btn-o-white {
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+}
+.btn.btn-o-white:hover {
+    background: white;
+    color: #6a6a6a;
+}
+#contact .btn.btn-o-white {
+	border: 1px solid #3A4F52;
+    color: #3A4F52;
+    background: transparent;
+}
+
+/*////////////////////////////////////////////////////////////////////////
+//  02 - Header
+///////////////////////////////////////////////////////////////////////*/
+
+#header{	
+	position: relative;			
+	text-align: center;
+	padding: 0 !important;
+}
+
+
+#header .top {
+	position:fixed;
+	top:0;
+	width: 100%;
+	padding: 30px;
+	height: auto;
+	z-index: 500;
+	-o-transition: all .5s;
+	-ms-transition: all .5s;
+	-moz-transition: all .5s;
+	-webkit-transition: all .5s;	
+	transition: all .5s;		
+}
+#header .top.solid,#header .top.solid1 {
+    background: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+body.home #header .top.solid,#header .top.solid1 {
+	background: #fff;
+}
+
+#header .top h1{
+	margin-bottom: 0;
+	display: none;
+}
+#header .top.solid h1,#header .top.solid1 h1 {
+	display: block;
+}
+#header .toggleDrawer i {
+    padding-top: 7px;
+}
+
+#header .logo, #header .toggleDrawer{
+	font-family: 'NeuzeitGro-Reg';
+	color: #3a4f52;
+}
+body.home #header .logo,body.home #header .toggleDrawer{ color: #3a4f52; }
+#header .toggleDrawer{
+	
+}
+#header .slogan{
+	font-size: 4em;
+	margin-bottom: 15px;
+	line-height: 1em;
+	font-family: 'NeuzeitGro-Reg';
+	color: #4da7ca;
+
+}
+
+#header .secondary-slogan{
+	font-size: 1.6em;
+	color: #6a6a6a;
+	line-height: 1em;
+	font-family: 'NeuzeitGro-Reg';
+}
+
+#header > .bottom {
+    position: absolute;
+    bottom: 75px;
+    text-align: center;
+    width: 100%;
+}
+#header > .bottom a img {
+    width: 50px;
+}
+#header > .bottom a {
+    opacity: 0.7;
+}
+#header > .bottom a:hover {
+    opacity: 1;
+}
+
+#header.media {
+    
+}
+
+#header .toggleDrawer .fa-2x,#header .toggleDrawer .fa-lg {
+    color: #070a0c; font-size: 1em;
+}
+
+
+.burger-menu {
+    position: fixed;
+    right: 50px;
+    top: 22px;
+    width: 48px;
+    height: 48px;
+    z-index: 100;
+    cursor: pointer;
+    background: url(images/assets.png) -240px 0 no-repeat;
+    -moz-transition-property: right;
+    -moz-transition-duration: 0.5s;
+    -moz-transition-timing-function: ease-out;
+    -webkit-transition-property: right;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-property: right;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    overflow: hidden; font-size: 0px;
+    cursor: pointer;
+}
+.burger-menu:hover {
+    background-position: -192px 0;
+}
+.burger-menu.burger_animation {
+    right: 335px;
+}
+.burger_animation {
+    -webkit-animation-name: burgerAnim;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: steps(10);
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-direction: normal;
+    -moz-animation-name: burgerAnim;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-timing-function: steps(10);
+    -moz-animation-delay: 0s, 0s;
+    -moz-animation-iteration-count: 1, 1;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-direction: normal;
+    animation-name: burgerAnim;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(10);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+.burger_animation_hide {
+    -webkit-animation-name: burgerAnim_hide;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: steps(10);
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-direction: normal;
+    -moz-animation-name: burgerAnim_hide;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-timing-function: steps(10);
+    -moz-animation-delay: 0s;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-direction: normal;
+    animation-name: burgerAnim_hide;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(10);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+@-webkit-keyframes burgerAnim {
+    0% {
+        background-position: 0px -111px;
+    }
+    100% {
+        background-position: -480px -111px;
+    }
+}
+@-moz-keyframes burgerAnim {
+    0% {
+        background-position: 0px -111px;
+    }
+    100% {
+        background-position: -480px -111px;
+    }
+}
+@keyframes burgerAnim {
+    0% {
+        background-position: 0px -111px;
+    }
+    100% {
+        background-position: -480px -111px;
+    }
+}
+@-webkit-keyframes burgerAnim_hide {
+    0% {
+        background-position: -480px -111px;
+    }
+    100% {
+        background-position: -0px -111px;
+    }
+}
+@-moz-keyframes burgerAnim_hide {
+    0% {
+        background-position: -480px -111px;
+    }
+    100% {
+        background-position: -0px -111px;
+    }
+}
+@keyframes burgerAnim_hide {
+    0% {
+        background-position: -480px -111px;
+    }
+    100% {
+        background-position: -0px -111px;
+    }
+}
+
+/*////////////////////////////////////////////////////////////////////////
+//  03 - Drawer with menu
+///////////////////////////////////////////////////////////////////////*/
+#wrapper{ position: relative; z-index: 99; }
+#drawer-right {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-right: -300px;
+    background: #fff;
+    border-left: 1px solid #ebebeb;
+    width: 0px;
+    padding: 20px;
+    z-index: 999;
+    -moz-transition-property: width;
+    -moz-transition-duration: 0.5s;
+    -moz-transition-timing-function: ease-out;
+    -webkit-transition-property: width;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    overflow: hidden;
+
+}
+#drawer-right.navigation {    
+   	width: 300px;
+}
+#drawer-right h1, #drawer-right h2{color: #3a4f52;}
+
+#drawer-right .nav-pills>li>a {
+	font-size: 18px;
+	border-radius: 0;
+}
+
+#drawer-right .social{margin-top: 30px}
+#drawer-right .social ul {
+    list-style: none;
+    padding-left: 20px;
+}
+#drawer-right .social ul > li {
+    display: inline-block;
+    margin: 0 5px;
+}
+#drawer-right .social ul > li > a{
+	-o-transition: none !important;
+	-ms-transition: none !important;
+	-moz-transition: none !important;
+	-webkit-transition: none !important;
+	transition: none !important;
+}
+#drawer-right .social ul > li > a:hover{
+	color: #3a4f52;
+}
+
+.works_detail {
+    text-align: center;
+}
+.works_detail img {
+    padding: 15px 0px;
+}
+
+/*//////////////////////////////
+    Blog
+///////////////////////////////*/
+#blog {
+	background: #fff;
+}
+
+/*//////////////////////////////
+    Media
+///////////////////////////////*/
+#media h1 {
+    text-align: left;
+}
+
+.media {
+    //border: solid 1px #aaaaaa;
+    text-align: center;
+}
+
+.media header h1.entry-title {
+	text-align: left;
+	padding-top: 5px;
+}
+
+.media a {
+    color: #000;
+}
+.media img {
+    //width: 100%;
+}
+
+.media .media-left {
+    width: 40%;
+    float: left;
+    word-break: break-all;
+}
+.media-left h2 {
+	padding: 15px 5px 5px;
+}
+.media-left p {
+	padding: 5px 10px;
+	color: #343;
+}
+
+.media .media-right {
+	width: 60%;
+	float: left;
+}
+
+.text-left {
+	padding: 10px 15px;
+    text-align: left;
+}
+.tool-bar{ text-align: center; }
+.tool-bar a{ color: #3a4f52;  letter-spacing: 1px; }
+.tool-bar span.nav-previous{ float: left; }
+.tool-bar span.nav-next{ float: right; }
+ 
+/*////////////////////////////////////////////////////////////////////////
+//  04 - Parallax styles
+///////////////////////////////////////////////////////////////////////*/
+
+.content-block{
+	background:transparent no-repeat center center fixed;
+	-webkit-background-size:100%;
+	-moz-background-size:100%;
+	-o-background-size:100%;
+	background-size:100%;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	overflow:hidden;
+	padding: 60px 0;
+}
+
+.parallax{
+	padding: 80px 0;
+}
+
+.block-body {
+	margin-top: 60px;
+}
+
+#header {
+	/*background-image: url(../images/header-bg.jpg);*/
+}
+#header.works {
+	background: none;
+}
+#header.media {
+    background-image: none;
+}
+#about {
+	/*background-image: url(../images/traffic.jpg);*/
+	color: #3a4f52;
+}
+#parallax {
+	background-image: url(../images/blue_mac2.jpg);
+	color: white;
+}
+#contact {
+	/*background-image: url(../images/newsletter-bg.png);*/
+	color: #3a4f52;
+	background-color: #fff;
+}
+#parallax h1{
+	margin-bottom: 60px;
+	color: white;
+}
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////
+//  05 - Recent works
+///////////////////////////////////////////////////////////////////////*/
+
+.recent-work {
+    width: 100%;
+    padding-bottom: 27%;
+    background: #C3C9CC;
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 27%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin-bottom: 30px;
+    text-decoration: none !important;
+    min-height: 274px;
+}
+
+.recent-work span{
+	opacity: 0;
+	position: relative;
+	z-index: 1;
+}
+.recent-work span.title-artice {
+    color: #fff;
+    display: block;
+    margin: 0 0 5px;
+    text-decoration: none;
+}
+.recent-work:before {
+    background: rgba(2, 56, 58, 0.7);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    opacity: 0;
+    -o-transition: all .2s;
+	-ms-transition: all .2s;
+	-moz-transition: all .2s;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+}
+.recent-work:hover {
+    background-size: 200%;
+    background-position: center;
+}
+.recent-work:hover:before, .recent-work:hover span {
+    opacity: 1;
+}
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////
+//  06 - Services
+///////////////////////////////////////////////////////////////////////*/
+
+#services h1, #services h2{
+	color: white;
+}
+.service i {
+    font-size: 60px;
+}
+.service {
+    padding: 0 25px;
+}
+.service table.about {
+    margin-right: auto;
+    margin-left: auto;
+    width: 60%
+}
+.service table.about td {
+    vertical-align: top;
+    text-align: left;
+}
+.service table.about td.col-1 {
+    width: 20%;
+}
+.content-block.db{ background: #fff; }
+
+/*////////////////////////////////////////////////////////////////////////
+//  07 - Blog
+///////////////////////////////////////////////////////////////////////*/
+
+
+#blog .blog-post img {
+    margin-bottom: 20px;
+}
+#blog .date {
+    margin-bottom: 15px;
+    font-style: italic;
+}
+figure {
+	margin: 0 auto;
+}
+
+/*////////////////////////////////////////////////////////////////////////
+//  08 - Testimonials
+///////////////////////////////////////////////////////////////////////*/
+
+
+#testimonials{
+	text-align: center;
+}
+#testimonials .testimonial > img {
+    border-radius: 100%;
+    margin-bottom: 15px;
+}
+#testimonials .testimonial {
+	padding: 25px;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////
+//  09 - Contact
+///////////////////////////////////////////////////////////////////////*/
+
+
+#contact{
+	color: #3a4f52;
+}
+#contact h1{color: #3a4f52}
+
+.form-control-white {
+    color: #3a4f52;
+}
+
+.form-control-white::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #3a4f52;
+}
+.form-control-white:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #3a4f52;
+    opacity:  1;
+}
+.form-control-white::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #3a4f52;
+    opacity:  1;
+}
+.form-control-white:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #3a4f52;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////
+//  10 - Footer
+///////////////////////////////////////////////////////////////////////*/
+
+
+
+#footer{ background: #fff; color: #3a4f52;}
+.menu-other{ display: none; }
+
+/*////////////////////////////////////////////////////////////////////////
+//  11 - Responsive styles
+///////////////////////////////////////////////////////////////////////*/
+
+@media (min-width: 768px){
+	.works .pull-right{ display: none; }
+	.works .menu-other{ display: block; }
+	.works .menu-other .nav-pills > li{ float: left; }
+	.menu-other .nav > li > a{ font-size: 15px; }
+	.menu-other nav{ float: left; }
+	.menu-other .social{ float: right; }
+	.menu-other .social h2{ float: left; margin-bottom: 0px; color: #3a4f52; font-size: 20px !important; }
+	.menu-other .social ul{ float: left; margin: 0px; padding: 0px; }
+	.menu-other .social ul li{ list-style: none; float: left; margin: 0px 0px 0px 15px; }
+	.word .slogan{ display: none; }
+	.toggleDrawer{ display: none; }
+	body.home .toggleDrawer{ display: block; }
+
+} 
+@media (max-width: 767px){
+	#header .logo {
+		font-size: 28px;
+	}
+	#header .top .pull-right a.toggleDrawer{ display: none; }
+	.blog-post {
+		margin-bottom: 40px;
+	}
+	.entry-content figure ,
+	.entry-content div{ width: 100% !important;  }
+	.entry-content img{ max-width: 100% !important; height: unset !important; width: unset !important; }
+	.entry-content .separator a{ margin-right: 0px !important; margin-left: 0px !important; }
+	.entry-content iframe{ width: 100% !important; height: unset !important; }
+	.recent-work {
+		background-position: center;
+	}
+
+	.recent-work:before {
+		opacity: 1;
+	}
+
+	.recent-work span {
+		opacity: 1;
+	}
+	.service table.about {
+        width: 100%
+    }
+	.service table.about td {
+        width: 30%
+    }
+    .content-block{ padding: 30px 0px 60px; }
+    .burger-menu{ top: 8px; }
+}
+@media (max-width: 667px) {
+	#header section.center{ padding-top: 100px !important; }
+}
+
+@media (max-width: 568px) {
+	#drawer-right.navigation{
+		width: 250px;
+	}
+	.burger-menu.burger_animation{ right: 285px; }	
+	#header section.center{ padding-top: 68px !important; }
+
+}
+@media (max-width: 414px) {
+	#drawer-right.navigation{
+		width: 200px;
+	}
+	.burger-menu.burger_animation{ right: 235px; }
+	#header .slogan{ position: absolute;
+    padding: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    width: 100%;
+     }
+
+	#header .secondary-slogan {
+    height: 270px;
+    top: 50%;
+    position: absolute;
+    font-size: 1.6em;
+    color: #6a6a6a;
+    line-height: 1em;
+    font-family: 'NeuzeitGro-Reg';
+    transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+    width: 100%;
+} 
+#header .secondary-slogan span{
+	  bottom: 0px;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    text-align: center;
+}
+
+}
+@media (max-width: 375px) {
+	.burger-menu{
+		right: 13px;
+	}
+	#header .slogan{  }
+}
+@media (max-width: 341px) {
+	#header .slogan{  }
+}
+@media (max-width: 480px) {
+	#header .logo {
+		font-size: 28px;
+	}
+	#drawer-right {
+		padding: 10px 20px;
+	}
+
+	#drawer-right .nav-pills>li>a {
+		font-size: 17px;
+	}
+
+	.nav-stacked>li+li {
+		margin-top: 0;
+	}
+
+	.nav>li>a {
+		padding: 8px 15px;
+	}
+
+	#drawer-right .social {
+		margin-top: 5px;
+	}
+
+	#header {
+		background-size: cover;
+	}
+	
+	.media-left,
+	.media-right {
+		width: 100% !important;
+		padding: 0px;
+	}
+
+}
+@media (max-width: 421px){
+	#header .toggleDrawer{ }
+	
+	#header .top h1{ line-height: 30px; }
+	#header a.logo{ font-size: 24px; display: block; line-height: 30px; }
+}
+@media (max-width: 361px){
+	#header .top { padding-right: 15px; }
+}
